@@ -1,0 +1,61 @@
+.cards {
+    @extend %flex-centralize;
+    padding: 80px 0 100px 0;
+}
+
+@media screen and (max-width: 940px) {
+    .cards {
+        padding: 80px 20px 100px 20px;
+    }
+}
+
+.card {
+    max-width: 250px;
+}
+
+@media screen and (max-width: 789px) {
+    .cards > .card {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .cards {
+        justify-content: center;
+    }
+}
+.card__heading {
+    font-size: 26px;
+    color: #465065;
+}
+
+.card__paragraph {
+    padding: 0;
+    margin: 20px 0 20px 0;
+}
+
+.card__link {
+    color: #fa5c65;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.card__link:hover > .arrow {
+    transform: translateX(10px);
+    transition-duration: 0.4s;
+}
+
+.card__subtitle {
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 17px;
+}
+
+.arrow {
+    background: url('../img/Arrow.svg') no-repeat center center;
+    height: 9px;
+    width: 12px;
+    display: inline-block;
+    transition: 0.4s;
+}

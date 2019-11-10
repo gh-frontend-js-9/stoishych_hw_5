@@ -1,0 +1,206 @@
+.hero {
+    background: url('../img/hero.webp') no-repeat top center/cover; // на 1920px нужен cover, но картинка масштабируется и уже никак не может выглядеть на 1920 как на шаблоне. 
+    height: 100vh;
+}
+
+.header {
+    @extend %flex-centralize;
+    flex-wrap: wrap;
+}
+
+.header-logo {
+    width: 140px;
+    height: 74px;
+    background-color: #fa5c65;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.header-logo__text {
+    color: #ffffff;
+    font-family: 'Domine';
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.header-logo__dot {
+    color: #314a5b;
+}
+
+.header-menu__item {
+    list-style-type: none;
+    @extend %flex-centralize;
+}
+
+.header-menu__link {
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.header-menu__link:hover {
+    color: #fa5c65;
+}
+
+.header-social__img:first-child {
+    margin-right: 25px;
+}
+
+.hero-text {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text__heading {
+    font-size: 48px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-text__heading {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-text__heading {
+        font-size: 28px;
+    }
+}
+
+.hero-text__paragraph {
+    font-size: 20px;
+    color: $primary-color;
+    margin: 10px 0 40px 0;
+}
+
+
+@media screen and (max-width: 480px) {
+    .hero-text__paragraph {
+        font-size: 16px;
+    }
+}
+
+.hero-text__btn {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    padding: 21px 42px;
+    background-color: #fa5c65;
+    max-width: 170px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.hero-text__btn:hover {
+    transform: scale(1.1);
+    background-color: #fc4d56;
+}
+
+.header-burger {
+  position: relative;
+  cursor: pointer;
+  height: 30px;
+  width: 20px;
+  display: none;
+}
+
+.header-burger__line,
+.header-burger__line::before,
+.header-burger__line::after {
+  height: 3px;
+  width: 20px;
+  background: black;
+  position: absolute;
+  content: '';
+  top: 50%;
+
+}
+
+.header-burger__line::before {
+  top: 7px;
+  transition: 0.2s;
+}
+
+.header-burger__line::after {
+  top: -7px;
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+      position: absolute;
+      width: 100%;
+      padding: 0;
+  }  
+
+  .header-logo {
+      margin-left: 20px;
+  }
+
+  .hero {
+      position: relative;
+  }
+  .header-menu {
+    width: 100%;
+    display: none;
+    transition: 0.2s;
+  }
+  
+  .header-menu__item {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .header-menu__li {
+    margin-top: 40px;
+  }
+
+  .header-menu__link {
+      margin-right: 0px;
+  }
+
+  .header-burger {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .social-icons_red {
+      display: none;
+  }
+  .header-menu__link {
+      color: white;
+  }
+}
+.header-bg {
+    background-color: rgba($color: gray, $alpha: 0.8);
+    transition: 0.4s;
+}
+.header-menu_active {
+  display: block;
+}
+.open {
+  height: 0px;
+}
+.open::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.open::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+.wrap-menu {
+    flex-wrap: wrap;
+    width: 100vh;
+}

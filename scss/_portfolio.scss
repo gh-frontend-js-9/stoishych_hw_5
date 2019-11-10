@@ -1,0 +1,26 @@
+.portfolio {
+    @extend %flex-centralize;
+    padding-bottom: 105px;
+}
+
+@media screen and (max-width:807px) {
+    .portfolio{
+        justify-content: center;
+    }
+    .portfolio-card {
+        margin-top: 15px;
+    } 
+}
+.portfolio-card {
+    max-width: 100%;
+    color: $primary-color;
+}
+
+.portfolio-card__paragraph {
+    max-width: 370px;
+}
+
+.portfolio-card__heading {
+    color: $primary-color;
+    font-size: 40px;
+}
