@@ -1,0 +1,19 @@
+.footer {
+    padding: 35px 20px 40px 20px;
+    @extend %flex-centralize;
+}
+
+@media screen and (max-width:550px) {
+    .footer {
+        justify-content: center;
+    }
+    .footer-social {
+        margin-bottom: 15px;
+    }
+    .footer-author {
+        text-align: center;
+    }
+}
+
+
+
